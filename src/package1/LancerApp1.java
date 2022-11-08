@@ -36,7 +36,8 @@ public class LancerApp1 {
 		d.ajouterObjet(lesTrains[i]);
 		}
 		
-		
+		Visage v = new Visage(d);
+		d.ajouterObjet(v);
 		while(true) {
 		// la zone de dessin se réaffiche
 		d.repaint();
@@ -44,7 +45,7 @@ public class LancerApp1 {
 		d.pause(50);
 		//réaliser à tous les trains un déplacement élémentaire
 		d.animer();
-		
+		v.deplacer();
 		}
 
 	}
