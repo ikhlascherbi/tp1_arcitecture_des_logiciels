@@ -37,12 +37,30 @@ public class LancerApp1 {
 		}
 		
 		Visage v = new Visage(d);
-		d.ajouterObjet(v);
 		
+		
+		d.ajouterObjet(v);
 		d.ajouterObjet(new Etoile(100, 100, 50, 4.f, Color.green, Color.green));
 		d.ajouterObjet(new PolygoneRegulier(5, 240, 40, 10, 2.0f, Color.black, Color.black));
+
+
+
+		d.ajouterObjet(new AnimationForme(
+		new Etoile(300, 80, 40, 8.f, Color.yellow, Color.YELLOW),
+		new MvtCirculaire(300, 300, 180, 0, 5)
+		));
+		
+		d.ajouterObjet(new AnimationForme(
+				new PolygoneRegulier(8, 280, 45, 12, 2.0f, Color.gray, Color.gray),
+				new MvtCirculaire(250, 250, 180, 0, 5)
+				));
+		
+		
+		
+		
 		
 		while(true) {
+			
 		// la zone de dessin se réaffiche
 		d.repaint();
 		// un temps de pause pour avoir le temps de voir le nouveau dessin
@@ -50,6 +68,8 @@ public class LancerApp1 {
 		//réaliser à tous les trains un déplacement élémentaire
 		d.animer();
 		v.deplacer();
+
+		
 		}
 
 	}

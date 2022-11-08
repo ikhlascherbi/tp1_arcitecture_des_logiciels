@@ -87,4 +87,9 @@ public class Dessin extends JPanel{
         }
     }
 
+	public void ajouterObjet(AnimationForme t) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
